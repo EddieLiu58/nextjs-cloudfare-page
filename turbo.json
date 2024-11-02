@@ -15,8 +15,9 @@
 			"persistent": true
 		},
 		"pages:build": {
-			"cache": false,
-			"persistent": true
+			"dependsOn": ["^pages:build"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": [".next/**", "!.next/cache/**"]
 		}
 	}
 }
